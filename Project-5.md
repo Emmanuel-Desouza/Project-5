@@ -52,13 +52,19 @@ Server B name - `mysql client`
 `sudo systemctl restart mysql`
 
 ![service restart](./images/service-restart.png)
+
 ### Using the mysql utility to connect remotely from mysql client Linux Server to mysql server Database Engine (without using SSH).
-### signing on mysql root user
 
 ### Setting up mysql root user
-`ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';`
 
-![entering sql console](./images/root-sqluser.png)
+`ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '******';`
+
+![setting up mysql root user](./images/setting-up-rootsql.png)
+### signing on mysql root user
+
+`mysql -u root -p`
+
+![mysql root user sign-on](./images/signin-rootsql.png)
 
 `CREATE DATABASE mysqlDB;`
 
